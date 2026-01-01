@@ -1,0 +1,26 @@
+admin-app/
+
+│── app.js
+
+│── package.json
+
+│── /views
+
+│    ├── layout.ejs
+
+│    ├── dashboard.ejs
+
+│    ├── produk.ejs
+
+│    ├── pembelian.ejs
+
+│── /public
+
+│    ├── css/bootstrap.min.css
+
+│── /routes
+
+     ├── produk.js
+
+     ├── pembelian.js
+
