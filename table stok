@@ -1,0 +1,12 @@
+CREATE TABLE stok (
+
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+
+    Produk_id INT,
+
+    Jumlah INT,
+
+    FOREIGN KEY (produk_id) REFERENCES produk(id)
+
+);
+
