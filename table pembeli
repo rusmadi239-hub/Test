@@ -1,0 +1,18 @@
+CREATE TABLE pembelian (
+
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+
+    Produk_id INT,
+
+    Qty INT,
+
+    Total INT,
+
+    Status ENUM(‘selesai’,’cancel’) DEFAULT ‘selesai’,
+
+    Tanggal DATETIME DEFAULT CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (produk_id) REFERENCES produk(id)
+
+);
+
