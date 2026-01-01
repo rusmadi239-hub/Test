@@ -1,0 +1,22 @@
+INSERT INTO produk (nama, harga) VALUES
+
+(‘Keyboard’, 150000),
+
+(‘Mouse’, 80000),
+
+(‘Monitor’, 1200000),
+
+(‘Flashdisk’, 50000),
+
+(‘Headset’, 200000),
+
+(‘Laptop’, 6500000),
+
+(‘Printer’, 900000),
+
+(‘Kabel HDMI’, 40000),
+
+(‘Webcam’, 250000),
+
+(‘Mousepad’, 20000);
+
