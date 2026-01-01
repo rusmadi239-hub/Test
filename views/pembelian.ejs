@@ -1,0 +1,74 @@
+<%- include("layout", { body: `
+
+<h3>Input Pembelian</h3>
+
+
+
+<form action="/pembelian/add" method="POST" class="mb-4">
+
+  <select name="produk_id" class="form-control mb-2">
+
+    <% produk.forEach(p => { %>
+
+      <option value="<%= p.id %>"><%= p.nama %></option>
+
+    <% }) %>
+
+  </select>
+
+
+
+  <input type="number" name="qty" class="form-control mb-2" placeholder="Qty" required>
+
+
+
+  <button class="btn btn-primary">Tambah Pembelian</button>
+
+</form>
+
+
+
+<h3>Data Pembelian</h3>
+
+<table class="table table-bordered">
+
+  <tr>
+
+    <th>ID</th><th>Produk</th><th>Qty</th><th>Total</th><th>Status</th><th>Aksi</th>
+
+  </tr>
+
+
+
+  <% pembelian.forEach(p => { %>
+
+    <tr>
+
+      <td><%= p.id %></td>
+
+      <td><%= p.nama %></td>
+
+      <td><%= p.qty %></td>
+
+      <td>Rp <%= p.total %></td>
+
+      <td><%= p.status %></td>
+
+      <td>
+
+        <% if (p.status === 'selesai') { %>
+
+          <a href="/pembelian/cancel/<%= p.id %>" class="btn btn-danger btn-sm">Cancel</a>
+
+        <% } %>
+
+      </td>
+
+    </tr>
+
+  <% }) %>
+
+</table>
+
+` }) %>
+
